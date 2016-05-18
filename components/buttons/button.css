@@ -1,0 +1,68 @@
+button {
+	border: none; /*Removes border inherent to <button>s*/
+}
+
+button:focus {
+	outline: 0; /*Removes annoying on-focus outline inherent to <button>s*/
+}
+
+.button {
+	position: relative; /*Because we want to move it down in active state*/
+	display: inline-block;
+	text-decoration: none;
+	text-shadow: 0px -2px #2980b9;
+	padding: 15px 20px;
+	border-bottom: 5px solid #206592;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	font: 20px "Inconsolata", "Courier New", monospace;
+	font-weight: bold;
+	color: #fff;
+	background-color: #3498db; /*Color if you can't see my sweet gradients*/
+
+	/* Safari 4, Chrome 1-9, iOS 3.2-4.3, Android 2.1-3.0 */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#2980b9), to(#58a6da));
+
+	/* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+	background-image: -webkit-linear-gradient(top, #2980b9, #58a6da);
+
+	/* Firefox 3.6 - 15 ... does anybody even use this stuff anymore?? */
+	background-image: -moz-linear-gradient(top, #2980b9, #58a6da);
+
+	/* Opera 11.1 - 12 */
+	background-image: -o-linear-gradient(top, #2980b9, #58a6da);
+
+	/* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+	background-image: linear-gradient(to bottom, #2980b9, #58a6da);
+
+	/* IE 8-9 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#2980b9, endColorstr=#58a6da)";
+}
+
+.button:active { /*Optimal illusion funtime*/
+	border-bottom: 1px solid;
+	bottom: -4px;
+	margin-bottom: 4px; /*Add margin to compensate, otherwise active state will
+						  nudge elements below slightly out of position*/
+}
+
+.button:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#58a6da), to(#2980b9));
+	background-image: -webkit-linear-gradient(top, #58a6da, #2980b9);
+	background-image: -moz-linear-gradient(top, #58a6da, #2980b9);
+	background-image: -o-linear-gradient(top, #58a6da, #2980b9);
+	background-image: linear-gradient(to bottom, #58a6da, #2980b9);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#58a6da, endColorstr=#2980b9)";
+}
+
+.button-md {
+	padding: 20px 25px;
+	font-size: 25px;
+}
+
+.button-lg {
+	padding: 25px 30px;
+	font-size: 30px;
+}
